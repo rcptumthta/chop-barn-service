@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "name": "chop-barn-service",
+  "description": "Web service APIs for ChopBarn platform",
+  "author": {
+    "name": "Ratchapol Thongta",
+    "email": "rcptum.thta@outlook.com",
+    "url": "https://github.com/rcptumthta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rcptumthta/chop-barn-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rcptumthta/chop-barn-service/issues"
+  },
+  "private": true,
+  "engines": {
+    "node": "^20"
+  }
+}
