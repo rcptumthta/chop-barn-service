@@ -12,7 +12,7 @@ class Application {
       const server: NestExpressApplication = await NestFactory.create(AppModule, new ExpressAdapter());
 
       await server.init();
-      await server.listen(8080, "127.0.0.1");
+      await server.listen(3000, "0.0.0.0");
 
       this.logger.log("Application started successfully");
     } catch (error) {
