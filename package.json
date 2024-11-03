@@ -17,9 +17,12 @@
   "scripts": {
     "lint": "eslint . --ext .js,.json,.json5,.jsonc,.jsonl,.ts",
     "lint:fix": "eslint . --ext .js,.json,.json5,.jsonc,.jsonl,.ts --fix",
-    "build": "nest build",
-    "start": "nest start",
-    "start:debug": "nest start --debug --watch"
+    "build": "cross-env NODE_ENV=development nest build",
+    "build:staging": "cross-env NODE_ENV=staging nest build",
+    "build:production": "cross-env NODE_ENV=production nest build",
+    "build:ci": "cross-env NODE_ENV=ci nest build",
+    "start": "cross-env NODE_ENV=development nest start",
+    "start:debug": "cross-env NODE_ENV=development nest start --debug --watch"
   },
   "dependencies": {
     "@nestjs/common": "10.4.6",
@@ -32,12 +35,17 @@
   "devDependencies": {
     "@nestjs/cli": "10.4.5",
     "@nestjs/schematics": "10.2.3",
+    "@types/dotenv-webpack": "7.0.8",
     "@types/eslint": "8.56.10",
     "@types/eslint-config-prettier": "6.11.3",
     "@types/express": "4.17.21",
     "@types/node": "20.17.1",
+    "@types/source-map-support": "0.5.10",
     "@typescript-eslint/eslint-plugin": "7.18.0",
     "@typescript-eslint/parser": "7.18.0",
+    "copy-webpack-plugin": "12.0.2",
+    "cross-env": "7.0.3",
+    "dotenv-webpack": "8.1.0",
     "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsonc": "2.16.0",
@@ -46,9 +54,14 @@
     "eslint-plugin-sonarjs": "2.0.4",
     "eslint-plugin-unicorn": "56.0.0",
     "eslint-plugin-unused-imports": "3.2.0",
+    "eslint-webpack-plugin": "4.2.0",
     "jsonc-eslint-parser": "2.4.0",
     "prettier": "3.3.3",
-    "typescript": "5.3.3"
+    "source-map-support": "0.5.21",
+    "terser-webpack-plugin": "5.3.10",
+    "ts-loader": "9.5.1",
+    "typescript": "5.3.3",
+    "webpack": "5.96.1"
   },
   "private": true,
   "engines": {
