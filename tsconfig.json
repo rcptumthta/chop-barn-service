@@ -35,6 +35,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "./dist",
+    "paths": {
+      "@api": ["./src/app/api"]
+    },
     "preserveConstEnums": true,
     "removeComments": true,
     "resolveJsonModule": true,
