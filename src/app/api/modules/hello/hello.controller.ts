@@ -4,15 +4,15 @@ import { HelloService } from "./hello.service";
 
 @Controller()
 export class HelloController {
-  private readonly helloService: HelloService;
+  private readonly service: HelloService;
 
-  constructor(helloService: HelloService) {
-    this.helloService = helloService;
+  constructor(service: HelloService) {
+    this.service = service;
   }
 
   @Get()
   @HttpCode(HttpStatus.OK)
   public index(): string {
-    return this.helloService.helloWorld();
+    return this.service.helloWorld();
   }
 }
