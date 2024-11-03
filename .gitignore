@@ -10,3 +10,8 @@ dist/*
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
+
+# - Environment files
+.env
+.env.*
+!.env.example
